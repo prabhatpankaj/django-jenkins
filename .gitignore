@@ -19,3 +19,5 @@ __pycache__
 
 # .pyc
 *.pyc
+
+config/settings/authkey.py

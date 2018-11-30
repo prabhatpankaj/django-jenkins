@@ -11,6 +11,9 @@ node {
             sh '. env/bin/activate'
             sh 'env/bin/pip install -r requirements.txt'
             sh 'env/bin/python3 manage.py test --settings=config.settings.development --testrunner=tests.test_runners.NoDbTestRunner'
+
+        stage 'Deploy'
+            sh './bin/deploy_prod.sh'
     }
 
     catch (err) {
