@@ -10,7 +10,7 @@ node {
             sh 'virtualenv env -p python3'
             sh '. env/bin/activate'
             sh 'env/bin/pip install -r requirements.txt'
-            sh 'env/bin/python3 manage.py test --settings=config.settings.development --testrunner=tests.test_runners.NoDbTestRunner'
+            sh 'env/bin/python3 manage.py test --settings=config.settings.production --testrunner=tests.test_runners.NoDbTestRunner'
 
     }
 
